@@ -12,12 +12,18 @@ min([42, 54, 65, 87, 0]) returns 0
 You may consider that there will not be any empty arrays/vectors.
 */
 
-var min = function(list){
+const min = (list) => {
+    let sorted = list.sort(function(a, b) {
+        return a - b;
+      });
     
-    return list[0];
+    return sorted[0];
 }
 
-var max = function(list){
+const max = (list) => {
+    let sorted = list.sort(function(a, b) {
+        return a - b;
+      });
     
-    return list[0];
+    return sorted[list.length - 1];
 }
